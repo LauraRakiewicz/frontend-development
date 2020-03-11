@@ -174,7 +174,23 @@ nav{
 }
 
 .description{
-    background-color: hotpink;
+    background-color: white;
+}
+
+.images{
+    border: 1px solid #82BB00;
+    border-style: solid;
+    border-width: 2px;
+    /* height: auto; */
+}
+
+.images img {
+    width:auto;
+    /* width: 100%; */
+    height:auto;
+    /* height: auto; */
+    object-fit:cover;
+    padding: 1rem;
 }
 
 /* media queries */
@@ -217,4 +233,13 @@ nav{
     .hero{
         height: 60vh;
     }
+}
+
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(2rem,1fr));
+    grid-gap: 1em;
+    grid-auto-rows: minmax(100px,auto);
+    margin-bottom: 20px;
 }

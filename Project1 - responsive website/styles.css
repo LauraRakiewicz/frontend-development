@@ -181,16 +181,14 @@ nav{
     border: 1px solid #82BB00;
     border-style: solid;
     border-width: 2px;
+    padding: 15px;
     /* height: auto; */
 }
 
 .images img {
-    width:auto;
-    /* width: 100%; */
-    height:auto;
-    /* height: auto; */
-    object-fit:cover;
-    padding: 1rem;
+    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
 }
 
 /* media queries */

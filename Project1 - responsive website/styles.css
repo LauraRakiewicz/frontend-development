@@ -33,7 +33,7 @@ img{
 }
 
 section{
-    padding: 5rem 0;
+    padding: 2rem 0;
 }
 
 body{
@@ -53,10 +53,10 @@ header{
 }
 
 .container{
-    width: 100%;
-    max-width: 98rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    /* width: 100%; */
+    /* max-width: 98rem; */
+    /* margin: 0 0; */
+    /* padding: 0 1.5rem; */
 }
 
 /* navigation */
@@ -109,8 +109,16 @@ nav{
 .nav-item{
     margin: 1rem 0 ;
     list-style: none;
-
+    position: relative;
+    width: 50%;
 }
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
 .nav-link{
     font-size: 1rem;
     text-transform: capitalize;
@@ -161,21 +169,35 @@ nav{
     color: green;
 }
 
+
+
 .container p{
-    margin-bottom: 2rem;
     margin-right: 10rem;
     margin-left: 10rem;
 }
 
+.bold-elem {
+    font-size: 16px;
+    color: #018136;
+    font-weight: bold;
+}
 
 /* arrow */
+
+.container-arrow-left{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .container-arrow{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
-    margin-top: 30px;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .arrow {
@@ -232,14 +254,19 @@ nav{
     border: 1px solid #82BB00;
     border-style: solid;
     border-width: 2px;
-    padding: 15px;
-    /* height: auto; */
+    
+    position:relative;
+    overflow:hidden;
+    padding-bottom:100%;
 }
 
 .images img {
-    width: 100%;
+    /* width: 100%; */
     object-fit: cover;
-    max-width: 100%;
+    /* max-width: 100%; */
+    position:absolute;
+    /* background-size: cover; */
+    /* background-position: center; */
 }
 
 /* media queries */
@@ -287,16 +314,37 @@ nav{
 
 .news{
     background-color: #ECECEC;
-    padding-top:80px;
+    /* padding-top:80px;
     padding-bottom:80px;
     padding-right:200px;
-    padding-left:200px;
+    padding-left:200px; */
+    
+
+    padding-bottom:0%; 
+    overflow:hidden; 
+    position:relative
+}
+
+.wrapper-news{
+    margin-right: 10rem;
+    margin-left: 10rem;
 }
 
 .wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(2rem,1fr));
     grid-gap: 1em;
-    grid-auto-rows: minmax(100px,auto);
-    margin-bottom: 20px;
+    /* grid-auto-rows: minmax(100px,auto); */
+}
+
+.wrapper-news h1 {
+    font-size: 1rem;
+    color: green;
+    font-weight: bold;
+}
+
+.wrapper-news p{
+    font-size: 0.5rem;
+    color: black;
+    line-height: normal;
 }

@@ -435,14 +435,9 @@ nav{
 
 /* dishes */
 .dishes-container{
-    /* width: 100%; */
-    /* overflow: hidden; */
-    /* align-items: center;
-     */
      display: flex;
      align-items: center;
      justify-content: center;
-
 }
 
 .dish{
@@ -454,4 +449,52 @@ nav{
 .dish p{
     color: white;
     text-transform: uppercase;
+}
+
+
+/* for parents */
+.for-parents-container{
+   background-color: #ECECEC;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.row>* {
+    margin: 20px;
+    color: gray;
+}
+
+
+/* for parents */
+.organizer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+ }
+
+.part{
+    /* width: 10%; */
+    margin: 2rem;
+    display: inline-block;
+    text-transform: capitalize;
+    text-align: center;    
+
+}
+
+.part p{
+    color: black;
+    text-transform: capitalize;
+    text-align: center;    
+}
+
+.part img{
+    width: 50%;
 }

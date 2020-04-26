@@ -37,7 +37,8 @@ section{
 }
 
 body{
-    background-color: #F5F5F5;
+    /* background-color: #F5F5F5; */
+    background-color: white;
 }
 
 /* header */
@@ -61,10 +62,10 @@ header{
 
 /* navigation */
 nav{
-    widows: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+
 }
 .nav-brand{
     width: 2rem;   
@@ -79,21 +80,16 @@ nav{
 }
 
 .nav-list{
-    /* width: 25rem; */
-    /* height: 50vh; */
     background-color: white;
     position: fixed;
     top: 0;
-    /* right: -26rem; */
+
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction:row;
     align-items: center;
     justify-content: center;
-    /* z-index: 15000; */
-    /* transition: all 650ms ease-in-out; */
-    
-    /* margin-right: 200px; */
-    /* margin-left: 200px; */
+    /* max-width: 70%; */
 }
 
 .nav-list.active{
@@ -107,10 +103,11 @@ nav{
 }
 
 .nav-item{
-    margin: 1rem 0 ;
+    margin: 5px;
+    font-size: 10px;
     list-style: none;
     position: relative;
-    width: 50%;
+    width: 2rem;
 }
 
 .square:after {
@@ -120,11 +117,10 @@ nav{
 }
 
 .nav-link{
-    font-size: 1rem;
+    /* font-size: 1rem; */
     text-transform: capitalize;
     color: rgba(0, 0,0, 7);
 }
- /* TODO  - icons */ 
 
 
 /* hero */
@@ -137,12 +133,17 @@ nav{
     position: relative;
 }
 
-/* News */
-
+/* Project background */
 .project-background{
     background-color: #F5F5F5;
 }
 
+.project-background p{
+    background-color: #F5F5F5;
+}
+
+
+/* News */
 .h3{
     padding: 0;
     text-transform: uppercase;
@@ -312,7 +313,7 @@ nav{
     .nav-link{
         color: black;
         position: relative;
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
     .hero{
         height: 60vh;
@@ -346,7 +347,7 @@ nav{
 }
 
 .wrapper-news h1 {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     color: green;
     font-weight: bold;
 }
@@ -497,4 +498,29 @@ nav{
 
 .part img{
     width: 50%;
+}
+
+
+/* footer */
+
+
+.footer-container{
+    margin-top: 50px;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    flex-direction:column;
+
+}
+
+.footer-container img{
+    width: 50%;
+}
+
+.footer-containe stip{
+    /* width: 100%; */
+    background-color: #018136;
+    min-height: 40px;
 }

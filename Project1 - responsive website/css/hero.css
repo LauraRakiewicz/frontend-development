@@ -1,0 +1,11 @@
+/* hero */
+.hero{
+    width: 100%;
+    /* height: 80vh; */
+    background: url("/images/dzieci.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top, center;
+    min-height: 600px;
+    
+}

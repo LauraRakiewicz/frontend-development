@@ -1,0 +1,27 @@
+.organizer{
+    background-color: #F5F5F5;
+}
+
+.organizer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.part{
+    margin: 2rem;
+    display: inline-block;
+    text-transform: capitalize;
+    text-align: center;    
+
+}
+
+.part p{
+    color: black;
+    text-transform: capitalize;
+    text-align: center;    
+}
+
+.part img{
+    width: 50%;
+}

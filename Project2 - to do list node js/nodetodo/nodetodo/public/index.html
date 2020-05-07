@@ -44,22 +44,7 @@
                                 <button class="tablinks" onclick="openTab(event, 'Done')">Done</button>
                         </div>
 
-                        <!-- TODO LIST -->
-                        <div id="Done" class="tabcontent">
-                                <div id="todo-list" class="row">
-                                        <div class="col-sm-4 col-sm-offset-4">
-
-                                                <!-- LOOP OVER THE TODOS IN $scope.todos -->
-                                                <div class="checkbox" ng-repeat="todo in todos">
-                                                        <label>
-                                                                <input type="checkbox" ng-click="updateTodo(todo._id)" ng-model="todo.done">
-                                                                {{ todo.text }} <button ng-click="deleteTodo(todo._id)">X</button>      
-                                                        </label>
-                                                </div>
-
-                                        </div>
-                                </div>
-                        </div>
+                        <!-- ALL LIST -->
                         <div id="All" class="tabcontent">
                                 <div id="todo-list" class="row">
                                         <div class="col-sm-4 col-sm-offset-4">
@@ -74,8 +59,31 @@
                                         </div>
                                 </div>
                         </div>
+                        <!-- DONE LIST -->
+                        <div id="Done" class="tabcontent">
+                                <div id="todo-list" class="row">
+                                        <div class="col-sm-4 col-sm-offset-4">
 
-                      
+                                                <!-- LOOP OVER THE TODOS IN $scope.todos -->
+                                                <div class="checkbox" ng-repeat="todo in todosdone">
+                                                        <label> <li>{{ todo.text }}</li> </label>
+                                                </div>
+
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- TODO LIST -->
+                        <div id="Todo" class="tabcontent">
+                                <div id="todo-list" class="row">
+                                        <div class="col-sm-4 col-sm-offset-4">
+
+                                                <!-- LOOP OVER THE TODOS IN $scope.todos -->
+                                                <div class="checkbox" ng-repeat="todo in notdone">
+                                                        <label> <li>{{ todo.text }}</li> </label>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
 
                         <!-- <ul class="nav nav-tabs">
                                 <li class="active"><a href="#">All</a></li>

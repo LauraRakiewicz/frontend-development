@@ -44,6 +44,40 @@ app.get("/api/todos", function(req, res) {
   });
 });
 
+// api ---------------------------------------------------------------------
+// get all todos DONE
+app.get("/api/todos/done", function(req, res) {
+  // use mongoose to get all todos in the database
+  Todo.find(function(err, todos) {
+    // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+
+    var filtered_todo = todos.filter(function (el) {
+      return el.done == true;
+    });
+
+    if (err) res.send(err);
+    res.json(filtered_todo); // return all todos in JSON format
+  });
+});
+
+// api ---------------------------------------------------------------------
+// get all todos TODO (not done)
+app.get("/api/todos/notdone", function(req, res) {
+  // use mongoose to get all todos in the database
+  Todo.find(function(err, todos) {
+    // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+
+    var filtered_todo = todos.filter(function (el) {
+      return el.done == false;
+    });
+
+    if (err) res.send(err);
+    res.json(filtered_todo); // return all todos in JSON format
+  });
+});
+
+
+
 app.get("/api/todos/:todo_id", function(req, res) {
   // use mongoose to get all todos in the database
   Todo.find(

@@ -21,6 +21,25 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
+  'post /books/delete/:bookId': {
+    controller: 'BooksController',
+    action: 'delete',
+    skipAssets: true
+  },
+
+  'get /books/edit/:bookId': {
+    controller: 'BooksController',
+    action: 'edit',
+    skipAssets: true
+  },
+
+  'post /books/update/:bookId': {
+    controller: 'BooksController',
+    action: 'update',
+    skipAssets: true
+  },
+
+  // 'edit /books/edit/:bookId' : 'BooksController.js.edit'
 
   /***************************************************************************
   *                                                                          *

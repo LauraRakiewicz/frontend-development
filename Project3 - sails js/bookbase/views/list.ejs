@@ -14,7 +14,28 @@
                 <td><%= book.id %></td>
                 <td><%= book.title %></td>
                 <td><%= book.author %></td>
-                <td></td>
+                <td>
+
+                    <a href="/books/edit/<%= book.id %>" class="btn btn-primary">Edit</a>
+                    <form class="d-inline" action="/books/delete/<%= book.id %>" method="post">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+
+                    <!-- <td>
+                        <form class="d-inline" action="/books/edit/<%= book.id %>" method="POST">
+                            <input type="submit" class="btn btn-primary" value="Edit" title="Edit book">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/books/delete/<%= book.id %>" method="POST">
+                            <input type="submit" class="btn btn-danger" value="Delete" title="Delete book">
+                        </form>
+                    </td> -->
+                    <!-- <a href="/books/edit/<%= book.id %>" class="btn btn-primary">Edit</a>
+                    <form class="d-inline" action="/books/delete/<%= book.id %>" method="post">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form> -->
+                </td>
             </tr>
         <%  }) %>
     </tbody>

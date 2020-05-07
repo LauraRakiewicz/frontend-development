@@ -6,7 +6,14 @@
  */
 
 module.exports = {
-  
+  list:function(req,res){
+    Books.find({}).exec(function(err, books){
+        if(err){
+            res.send(500, {error: "Db erroe"})
+        }
+        res.view('list', {books:books})
+    });
+  }
 
 };
 

@@ -47,17 +47,12 @@ function mainController($scope, $http) {
   };
 
   // update a todo after checking it
-  $scope.updateTodo = function(id) {};
+  $scope.updateTodo = function(id) {
+    var new_todos = $scope.posts[index].etat;
+    Posts.update({ _id: post._id }, { "etat": etat });
+  };
 
   // delete a todo after checking it
   $scope.deleteTodo = function(id) {
-    $http
-      .delete("/api/todos/" + id)
-      .success(function(data) {
-        $scope.todos = data;
-      })
-      .error(function(data) {
-        console.log("Error: " + data);
-      });
-  };
+  }
 }

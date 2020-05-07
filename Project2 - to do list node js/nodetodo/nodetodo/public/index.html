@@ -12,6 +12,8 @@
 
                 <!-- SCROLLS -->
                 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+                <link rel="stylesheet" type="text/css" href="tabs-style.css">
+
                 <style>
                         html                                         { overflow-y:scroll; }
                 body                                         { padding-top:50px; }
@@ -23,7 +25,7 @@
                 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
                 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
                 <script src="core.js"></script>
-
+                <script src="tabs.js"></script>
         </head>
         <!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
 
@@ -35,20 +37,51 @@
                                 <h1>nodeTODO {{ cos }} <span class="label label-info">{{ todos.length }}</span></h1>
                         </div>
 
+                        <!-- TABS -->
+                        <div class="tab">
+                                <button class="tablinks" onclick="openTab(event, 'All')">All</button>
+                                <button class="tablinks" onclick="openTab(event, 'Todo')">Todo</button>
+                                <button class="tablinks" onclick="openTab(event, 'Done')">Done</button>
+                        </div>
+
                         <!-- TODO LIST -->
-                        <div id="todo-list" class="row">
-                                <div class="col-sm-4 col-sm-offset-4">
+                        <div id="Done" class="tabcontent">
+                                <div id="todo-list" class="row">
+                                        <div class="col-sm-4 col-sm-offset-4">
 
-                                        <!-- LOOP OVER THE TODOS IN $scope.todos -->
-                                        <div class="checkbox" ng-repeat="todo in todos">
-                                                <label>
-                                                        <input type="checkbox" ng-click="updateTodo(todo._id)" ng-model="todo.done">
-                                                        {{ todo.text }} <button ng-click="deleteTodo(todo._id)">X</button>      
-                                                </label>
+                                                <!-- LOOP OVER THE TODOS IN $scope.todos -->
+                                                <div class="checkbox" ng-repeat="todo in todos">
+                                                        <label>
+                                                                <input type="checkbox" ng-click="updateTodo(todo._id)" ng-model="todo.done">
+                                                                {{ todo.text }} <button ng-click="deleteTodo(todo._id)">X</button>      
+                                                        </label>
+                                                </div>
+
                                         </div>
-
                                 </div>
                         </div>
+                        <div id="All" class="tabcontent">
+                                <div id="todo-list" class="row">
+                                        <div class="col-sm-4 col-sm-offset-4">
+
+                                                <!-- LOOP OVER THE TODOS IN $scope.todos -->
+                                                <div class="checkbox" ng-repeat="todo in todos">
+                                                        <label>
+                                                                <input type="checkbox" ng-click="updateTodo(todo._id)" ng-model="todo.done">
+                                                                {{ todo.text }} <button ng-click="deleteTodo(todo._id)">X</button>      
+                                                        </label>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+
+                      
+
+                        <!-- <ul class="nav nav-tabs">
+                                <li class="active"><a href="#">All</a></li>
+                                <li><a href="#">To do</a></li>
+                                <li><a href="#">Done</a></li>
+                        </ul> -->
 
                         <!-- FORM TO CREATE TODOS -->
                         <div id="todo-form" class="row">

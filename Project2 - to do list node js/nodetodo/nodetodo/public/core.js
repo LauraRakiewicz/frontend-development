@@ -3,7 +3,7 @@ var nodeTodo = angular.module("nodeTodo", []);
 function mainController($scope, $http) {
   $scope.formData = {};
 
-  $scope.cos = "Ala ma kota";
+  $scope.cos = "College";
 
   // when landing on the page, get all todos and show them
   $http

@@ -79,26 +79,3 @@
     position:absolute;
 }
 
-gallerycont{
-  margin: .5vw;
-  display: -ms-flexbox;
-  -ms-flexbox-wrap: wrap;
-  -ms-flexbox-direction: column;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  display: -webkit-box;
-  display: flex;  
-}
-
-gallerycont div{
-  -webkit-box-flex: auto;
-  -ms-flex: auto;
-  flex: auto;
-  width: 200px;
-  margin: .5vw;
-}
-
-gallerycont div img{
-  width:100%;
-  height:auto;
-}

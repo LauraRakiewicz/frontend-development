@@ -9,7 +9,7 @@
  }
 
 .part{
-    margin: 2rem;
+    /* margin: 2rem; */
     display: inline-block;
     text-transform: capitalize;
     text-align: center;    

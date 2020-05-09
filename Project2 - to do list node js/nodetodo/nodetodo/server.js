@@ -1,4 +1,4 @@
-// set up ======================================================================
+// set up 
 var http = require("http");
 var express = require("express");
 var app = express(); // create our app w/ express
@@ -11,7 +11,7 @@ var path = require("path");
 
 var port = 4000;
 
-// configuration ===============================================================
+// configuration 
 
 mongoose.connect("mongodb://ja:dupadupa12@ds119072.mlab.com:19072/lol", {
   useNewUrlParser: true
@@ -23,16 +23,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public"))); // set the static files location /public/img will be /img for users
 
-// define model ================================================================
+// define model 
 var Todo = mongoose.model("Todo", {
   text: String,
   done: Boolean
 });
 
-// routes ======================================================================
+// routes 
 app.use(cors());
 
-// api ---------------------------------------------------------------------
+// api 
 // get all todos
 app.get("/api/todos", function(req, res) {
   // use mongoose to get all todos in the database
@@ -44,7 +44,7 @@ app.get("/api/todos", function(req, res) {
   });
 });
 
-// api ---------------------------------------------------------------------
+// api 
 // get all todos DONE
 app.get("/api/todos/done", function(req, res) {
   // use mongoose to get all todos in the database
@@ -60,7 +60,7 @@ app.get("/api/todos/done", function(req, res) {
   });
 });
 
-// api ---------------------------------------------------------------------
+// api 
 // get all todos TODO (not done)
 app.get("/api/todos/notdone", function(req, res) {
   // use mongoose to get all todos in the database
@@ -114,6 +114,23 @@ app.post("/api/todos", function(req, res) {
 });
 
 
+// update todo
+app.post("/api/todos/update/:todo_id", function(req, res) {
+  console.log("updating 2 ...")
+
+  Todo.findById(req.params.todo_id, (err, newtodo) => {
+    if (err) return handleError(err);
+    newtodo.done = !newtodo.done;
+    newtodo.save((err, updatedCat) => {
+      Todo.find(function(err, todos) {
+        console.log("elo")
+        if (err) res.send(err);
+        res.json(todos);
+      });
+    });
+  });
+});
+
 // delete a todo
 app.delete("/api/todos/:todo_id", function(req, res) {
   Todo.remove(
@@ -132,12 +149,12 @@ app.delete("/api/todos/:todo_id", function(req, res) {
   );
 });
 
-// application -------------------------------------------------------------
+// application 
 app.get("*", function(req, res) {
   res.sendFile("./public/index.html", { root: __dirname });
 });
 
-// listen (start app with node server.js) ======================================
+// listen (start app with node server.js) 
 var server = http.createServer(app);
 server.listen(app.get("port"), function() {
   console.log("Express server listening on port " + app.get("port"));

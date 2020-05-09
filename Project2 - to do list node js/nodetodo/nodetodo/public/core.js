@@ -33,6 +33,29 @@ function mainController($scope, $http) {
     console.log("Error: " + data);
   });
 
+  // update done and not done
+  function updateLists(){
+    console.log("update list")
+    
+    $http
+    .get("/api/todos/done")
+    .success(function(data) {
+      $scope.todosdone = data;
+    })
+    .error(function(data) {
+      console.log("Error: " + data);
+    });
+
+    $http
+    .get("/api/todos/notdone")
+    .success(function(data) {
+    $scope.notdone = data;
+    })
+    .error(function(data) {
+    console.log("Error: " + data);
+    });  
+  }
+
   // when submitting the add form, send the text to the node API
   $scope.createTodo = function() {
     $http
@@ -40,6 +63,7 @@ function mainController($scope, $http) {
       .success(function(data) {
         $("input").val("");
         $scope.todos = data;
+        updateLists();
       })
       .error(function(data) {
         console.log("Error: " + data);
@@ -48,11 +72,32 @@ function mainController($scope, $http) {
 
   // update a todo after checking it
   $scope.updateTodo = function(id) {
-    var new_todos = $scope.posts[index].etat;
-    Posts.update({ _id: post._id }, { "etat": etat });
+
+    console.log("updating 1...")
+    $http
+    .post("/api/todos/update/" + id)
+    .success(function(data) {
+      console.log("w data")
+      console.log(data)
+      $scope.todos = data;
+      updateLists();
+    })
+    .error(function(data) {
+      console.log("Error: " + data);
+    });
+    console.log("po data")
   };
 
   // delete a todo after checking it
   $scope.deleteTodo = function(id) {
-  }
+    $http
+      .delete("/api/todos/" + id)
+      .success(function(data) {
+        $scope.todos = data;
+        updateLists();
+      })
+      .error(function(data) {
+        console.log("Error: " + data);
+      });
+  };
 }

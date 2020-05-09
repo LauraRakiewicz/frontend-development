@@ -1,0 +1,21 @@
+.workshops-profile{
+
+}
+
+.workshops-profile .container-space{
+    column-count: 2;
+}
+
+.container-space .left-text p{
+    color: #018136;
+    font-weight: bold;
+    text-align: right;
+    /* column-width: rem; */
+
+}
+
+.container-space .right-text p{
+    /* color: lawngreen; */
+    text-align: left;
+    /* column-width: 1rem; */
+}

@@ -39,7 +39,8 @@
 
                         <!-- TABS -->
                         <div class="tab">
-                                <button class="tablinks" onclick="openTab(event, 'All')">All</button>
+                                <button class="tablinks" onclick="openTab(event, 'All')" id="defaultOpen">All</button>
+                                <!-- <button class="tablinks" onclick="openTab(event, 'All')">All</button> -->
                                 <button class="tablinks" onclick="openTab(event, 'Todo')">Todo</button>
                                 <button class="tablinks" onclick="openTab(event, 'Done')">Done</button>
                         </div>
@@ -85,11 +86,6 @@
                                 </div>
                         </div>
 
-                        <!-- <ul class="nav nav-tabs">
-                                <li class="active"><a href="#">All</a></li>
-                                <li><a href="#">To do</a></li>
-                                <li><a href="#">Done</a></li>
-                        </ul> -->
 
                         <!-- FORM TO CREATE TODOS -->
                         <div id="todo-form" class="row">
@@ -107,14 +103,11 @@
                                         </form>
                                 </div>
                         </div>
-
-                        <div id="todo-form" class="row">
-                                <div class="col-sm-8 col-sm-offset-2 text-center">
-                                        <input type="text" class="form-control" ng-model="cos">
-                                </div>
-                        </div>
                 </div>
 
+                <script>
+                  document.getElementById("defaultOpen").click();
+                </script>
         </body>
 
 </html>

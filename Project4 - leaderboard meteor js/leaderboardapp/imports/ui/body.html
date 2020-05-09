@@ -1,0 +1,22 @@
+<body>
+    <div class="container">
+      <header>
+        <h1>Leaders</h1>
+
+        <form class="new-person">
+            <input type="text" name="text" placeholder="Type to add new person" />
+        </form>
+
+      </header>
+  
+      <ul>
+        {{#each people}}
+          {{> person}}
+        {{/each}}
+      </ul>
+    </div>
+  </body>
+  
+  <template name="person">
+    <li>{{text}}</li>
+  </template>

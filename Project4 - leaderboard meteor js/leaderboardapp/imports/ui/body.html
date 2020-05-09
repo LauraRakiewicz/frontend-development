@@ -3,8 +3,11 @@
       <header>
         <h1>Leaders</h1>
 
-        <form class="new-person">
-            <input type="text" name="text" placeholder="Type to add new person" />
+        <form class="form-register">
+            <input type="text" name="username">
+            <input type="number" name="rank">
+            <button class="submit">Add</button>
+            <label><input type="checkbox" checked="{{checked}}" class="toggle-checked">sort ascending</label>
         </form>
 
       </header>
@@ -17,6 +20,3 @@
     </div>
   </body>
   
-  <template name="person">
-    <li>{{text}}</li>
-  </template>

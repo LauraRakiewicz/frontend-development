@@ -1,16 +1,15 @@
-.for-parents{
-    background-color: #ECECEC;
+.for-parents {
+    background-color: #ececec;
 }
-
-.parent-container{
+  
+.parent-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.parent-container p{
-    margin: 2rem;
-    display: inline-block;
-    text-transform: capitalize;
-    text-align: center;    
+.parent-container p {
+    margin: 12px;
+    text-transform: uppercase;
 }
+  

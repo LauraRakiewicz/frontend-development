@@ -1,7 +1,4 @@
-
-/* arrow */
-
-.container-arrow-left{
+.container-arrow-left {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -9,7 +6,7 @@
     margin-bottom: 10px;
 }
 
-.container-arrow{
+.container-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,9 +23,9 @@
     border-width: 0px 2px 2px 0px;
     transform: rotate(45deg);
     transition: border-width 6rem;
-  }
+}
 
-  .arrow:hover {
+.arrow:hover {
     border-bottom-width: 4px;
     border-right-width: 4px;
-  }
+}

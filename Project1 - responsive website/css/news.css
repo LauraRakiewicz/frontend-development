@@ -1,76 +1,71 @@
-.news{
-    background-color: #ECECEC;
-    /* padding-top:80px;
-    padding-bottom:80px;
-    padding-right:200px;
-    padding-left:200px; */
-    
-
-    padding-bottom:0%; 
-    overflow:hidden; 
-    position:relative
+.news {
+    background-color: #ececec;
+    padding-bottom: 0%;
+    overflow: hidden;
+    position: relative;
 }
 
-.wrapper-news{
-    margin-right: 10rem;
-    margin-left: 10rem;
-}
-
-.wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(2rem,1fr));
-    grid-gap: 1em;
-    /* grid-auto-rows: minmax(100px,auto); */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 24px;
 }
 
 .wrapper-news h1 {
-    /* font-size: 1rem; */
     color: green;
     font-weight: bold;
     font-size: 14px;
 }
 
-.wrapper-news p{
+.wrapper-news p {
     font-size: 0.5rem;
     color: black;
     line-height: normal;
 }
 
 
-
 /* Style the images inside the grid */
+
 .column img {
-    opacity: 0.8; 
+    opacity: 0.8;
     width: 150px;
     height: 150px;
-    cursor: pointer; 
-  }
-  
-  .column img:hover {
+    cursor: pointer;
+}
+
+.column img:hover {
     opacity: 1;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: '';
     display: table;
     clear: both;
-  }
-  
-  /* The expanding image container */
-  .container {
+}
+
+
+/* The expanding image container */
+
+.container {
     position: relative;
     display: none;
-  }
-  
+}
 
-.news-images{
-    border: solid #82BB00;
+.news-images {
+    border: solid #82bb00;
     border-style: solid;
     border-width: 2px;
     padding: 10px;
-    overflow:hidden;
+    overflow: hidden;
     display: flex;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
 }
 
 .news-images img {
@@ -79,3 +74,33 @@
     height: auto;
 }
 
+.news-descr {
+    width: 200px;
+    margin: 0 auto;
+    padding-left: 12px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 959px) {
+    .news-descr {
+        width: calc(100% - 254px);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .wrapper-news {
+        display: flex;
+        flex-direction: row;
+    }
+    .wrapper {
+        width: 25%;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    /* styling even children */
+    .wrapper:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    .news-descr {
+        height: 200px;
+    }
+}

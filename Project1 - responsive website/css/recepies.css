@@ -1,43 +1,37 @@
-/* Przepisy */
-
-.recepies{
+.recepies {
     height: 400px;
-    background-image: linear-gradient(rgba(6, 0, 0, 0.45), rgba(0, 0, 0, 0.46)), 
-    url(/images/fruitandvegetables.jpg);
-   
+    background-image: linear-gradient(rgba(6, 0, 0, 0.45), rgba(0, 0, 0, 0.46)), url('../images/fruitandvegetables.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+
 /* dishes */
-.dishes-container{
+
+.dishes-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: 300px;
 }
 
-.dish{
-   /* width: 10%; */
-   margin: 2rem;
-   display: inline-block;
-   position: relative;
-   width: 5%;
+.dish {
+    margin: 0 12px;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
-.dish p{
-   color: white;
-   text-transform: uppercase;
-   position: absolute;
-   text-align: center;
-   font-size: 14px;
-   bottom: 0px;
+.dish p {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    bottom: 0px;
 }
 
-.dish img{
-    /* top: 0px; */
-    /* position: absolute; */
+.dish img {
     top: 0px;
 }

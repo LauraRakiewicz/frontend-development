@@ -12,30 +12,32 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
     <!--Our own stylesheet-->
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/organizer.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/recepies.css">
-    <link rel="stylesheet" href="/css/gallery.css">
-    <link rel="stylesheet" href="/css/news.css">
-    <link rel="stylesheet" href="/css/arrow.css">
-    <link rel="stylesheet" href="/css/navigation.css">
-    <link rel="stylesheet" href="/css/hero.css">
-    <link rel="stylesheet" href="/css/media.css">
-    <link rel="stylesheet" href="/css/project-background.css">
-    <link rel="stylesheet" href="/css/for-parents.css">
-    <link rel="stylesheet" href="/css/workshops-profile.css">
-
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/organizer.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/recepies.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/news.css">
+    <link rel="stylesheet" href="./css/arrow.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/for-parents.css">
+    <link rel="stylesheet" href="./css/workshops-profile.css">
+    <!-- animations -->
+    <link rel="stylesheet" href="./css/text-animation.css">
+    <link rel="stylesheet" href="./css/effects/slider.css">
 
 </head>
 <body>
+  
     <header>
-        <div class="nav">
+        <div class="nav creme-background">
             <div class="nav-list">
                 <div class="nav-brand">
                     <a href="index.html">
-                        <img src= "images/logo.png" alt="">
+                        <img src= "images/logo.png" alt="" class="nav-logo">
                     </a>
                 </div>
                 <div class="menu-icons close">
@@ -65,16 +67,17 @@
             </div>
         </div>  
     </header>
-    
-    <section>
-        <div class="hero">
-            <img class="hamburger" src="images/dzieci.jpg" alt="">
-        </div>   
-    </section>    
+      
 
-    <section class="project-background">
+    <div class="hero">
+        <div class="hero-image">
+            <img class="slide-item" name="slide">
+        </div>
+    </div>   
+
+    <section>
         <div class="title-heading">
-            <h3>Tło projektu</h3>
+            <h3 class="fancy">Tło projektu</h3>
         </div>
         <div class="container-space">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, 
@@ -90,61 +93,64 @@
       
     </section>    
 
-    <div class="news">
-        <div class="title-heading">
-            <h3>Aktualności</h3>
-        </div>
+    
+    <section class="grey-background">
+        <div class="news">
+            <div class="title-heading">
+                <h3>Aktualności</h3>
+            </div>
 
-        <div class="wrapper-news">
-            <div class="wrapper">
-                <div class="news-images">
-                    <img src="/images/hiking.jpg" alt="">
-                </div>
-                <div>
-                    <h1>Star Gazing</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-                    <div class="container-arrow-left">
-                        <div class="arrow" onclick="gotoBottom()"></div>
+            <div class="wrapper-news">
+                <div class="wrapper">
+                    <div class="news-images">
+                        <img src="/images/hiking.jpg" alt="">
                     </div>
-                </div>
-                <div class="news-images">
-                    <img src="/images/hiking.jpg" alt="">
-                </div>
-                <div>
-                    <h1>Star Gazing</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-                    <div class="container-arrow-left">
-                        <div class="arrow" onclick="gotoBottom()"></div>
+                    <div>
+                        <h1>Star Gazing</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+                        <div class="container-arrow-left">
+                            <div class="arrow" onclick="gotoBottom()"></div>
+                        </div>
                     </div>
-                </div>
-            </div>     
-            <div class="wrapper">
-                <div>
-                    <h1>Star Gazing</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-                    <div class="container-arrow-left">
-                        <div class="arrow" onclick="gotoBottom()"></div>
+                    <div class="news-images">
+                        <img src="/images/hiking.jpg" alt="">
                     </div>
-                </div>
-                <div class="news-images">
-                    <img src="/images/hiking.jpg" alt="">
-                </div>
-                <div>
-                    <h1>Star gazing</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-                    <div class="container-arrow-left">
-                        <div class="arrow" onclick="gotoBottom()"></div>
+                    <div>
+                        <h1>Star Gazing</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+                        <div class="container-arrow-left">
+                            <div class="arrow" onclick="gotoBottom()"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="news-images">
-                    <img src="/images/hiking.jpg" alt="">
-                </div>
-            </div>   
-      </div>  
-        <div class="container-arrow">
-            <div class="arrow" onclick="gotoBottom()"></div>
+                </div>     
+                <div class="wrapper">
+                    <div>
+                        <h1>Star Gazing</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+                        <div class="container-arrow-left">
+                            <div class="arrow" onclick="gotoBottom()"></div>
+                        </div>
+                    </div>
+                    <div class="news-images">
+                        <img src="/images/hiking.jpg" alt="">
+                    </div>
+                    <div>
+                        <h1>Star gazing</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+                        <div class="container-arrow-left">
+                            <div class="arrow" onclick="gotoBottom()"></div>
+                        </div>
+                    </div>
+                    <div class="news-images">
+                        <img src="/images/hiking.jpg" alt="">
+                    </div>
+                </div>   
         </div>  
-    </div>
+            <div class="container-arrow">
+                <div class="arrow" onclick="gotoBottom()"></div>
+            </div>  
+        </div>
+    </section>
 
     <section class="workshops-profile">
         <div class="title-heading">
@@ -193,7 +199,6 @@
        
     </section>
        
-    
 
     <section class="recepies">  
         <div class="title-heading">
@@ -224,7 +229,7 @@
         </div>
     </section>    
 
-    <section class="for-parents">
+    <section class="for-parents grey-background">
         <div class="title-heading">
             <h3>Dla Rodziców</h3>
         </div>
@@ -277,5 +282,8 @@
 
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="/js/test-animation.js"></script>
+    <script type="text/javascript" src="/js/slider.js"></script>
+    <script type="text/javascript" src="/js/rectangle.js"></script>
 </body>
 </html>

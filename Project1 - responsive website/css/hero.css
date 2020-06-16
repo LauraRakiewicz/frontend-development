@@ -1,13 +1,16 @@
 /* hero */
-.hero{
-    width: 100%;
+ 
+    /* width: 100%;
     height: 80%;
     /* height: 80vh; */
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat;*/
+    /* background-size: cover;
     background-position: top, center;
-    min-height: 600px; 
-    position: relative;
+    position: relative; 
+} */
+
+.hero {
+    /* margin-bottom: 100px; */
 }
 /* 
 section {
@@ -27,4 +30,13 @@ section {
     height: 100%;
     object-fit: cover;
 } 
-*/
+ */
+
+ .hero-image{
+    /* max-height: 400px; */
+ }
+
+ .nav-logo{
+    width: 100%;
+    height: auto;
+ }

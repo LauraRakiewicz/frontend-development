@@ -1,8 +1,12 @@
 /* Przepisy */
 
 .recepies{
-    background-image: linear-gradient(to bottom, #81BC00, rgba(1, 129, 54, 0.3) 70.71%),
-    url("/images/fruitveg.jpeg");
+    height: 400px;
+    background-image: linear-gradient(rgba(6, 0, 0, 0.45), rgba(0, 0, 0, 0.46)), 
+    url(/images/fruitandvegetables.jpg);
+   
+    background-attachment: fixed;
+    background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -12,16 +16,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .dish{
    /* width: 10%; */
    margin: 2rem;
    display: inline-block;
+   position: relative;
+   width: 5%;
 }
 
 .dish p{
    color: white;
    text-transform: uppercase;
+   position: absolute;
+   text-align: center;
+   font-size: 14px;
+   bottom: 0px;
 }
 
+.dish img{
+    /* top: 0px; */
+    /* position: absolute; */
+    top: 0px;
+}

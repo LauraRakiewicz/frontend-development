@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 700px){
     header{
-        height: 8rem;
+        /* height: 8rem; */
     }
     .nav-brand{
         width: 3.5rem;
@@ -36,7 +36,7 @@
         /* font-size: 1rem; */
     }
     .hero{
-        height: 60vh;
+        /* height: 60vh; */
     }
 }
 
